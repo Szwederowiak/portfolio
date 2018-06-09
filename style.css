@@ -85,7 +85,7 @@ header {
 
 @media (max-width: 425px) {
     header {
-        max-width: 425px;
+        max-width: 775px;
         height: 100vh;
         
     }
