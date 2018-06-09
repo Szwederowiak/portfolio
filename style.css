@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&subset=latin-ext');
 
-* {font-family: 'Hind'}
-body {margin: 0; padding: 0; border: 0; z-index: 0} 
-.center-center{display: flex; justify-content: center;
-align-items: center;}
+* {
+    font-family: 'Hind'
+}
+body {
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    z-index: 0
+} 
+.center-center{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
 header {
     height: 794px;
     width: 100vw;
@@ -12,21 +22,18 @@ header {
     background-position: center;
     flex-direction: column !important;
     align-items: center;
-    justify-content: center
-    
-
+    justify-content: center;
+    position: relative;
 }
-
 .circle {
     background: #555555;
-    min-width: 350px;
-    min-height: 350px;
+    width: 350px;
+    height: 350px;
     border-radius: 100%;
     position: relative;
     z-index: 2;  
     
 }
-
 .circle::before {
     content: '';
     position: absolute;
@@ -39,12 +46,9 @@ header {
     z-index: 1;
     box-shadow: 0px 30px 40px 2px black;
 }
-
 #icons {
-    width: 550px;
-    height: 100px;
-}
 
+}
 #icons ul {
     width: 100%;
     height: 100%;
@@ -55,30 +59,15 @@ header {
     padding: 0;
     justify-content: space-between;
 }
-
 #icons ul li {
-    height: 350px;
+    height: 320px;
     display: flex;
     align-items: flex-end;
     transform-origin: top center;
     position: absolute;
     left: calc(50% - 37.5px);
-    bottom: 120px
-    
+    top: 50%;
 }
-
-#icons ul li:nth-of-type(1) {transform: rotate(50deg)}
-#icons ul li:nth-of-type(2) {transform: rotate(25deg)}
-#icons ul li:nth-of-type(3) {transform: rotate(0deg)}
-#icons ul li:nth-of-type(4) {transform: rotate(-25deg)}
-#icons ul li:nth-of-type(5) {transform: rotate(-50deg)}
-
-#icons ul li:nth-of-type(1) span {transform: rotate(-50deg)}
-#icons ul li:nth-of-type(2) span {transform: rotate(-25deg)}
-#icons ul li:nth-of-type(3) span {transform: rotate(0deg)}
-#icons ul li:nth-of-type(4) span {transform: rotate(25deg)}
-#icons ul li:nth-of-type(5) span {transform: rotate(50deg)}
-
 #icons ul li span {
     text-align: center;
     padding: 0;
@@ -94,33 +83,258 @@ header {
     font-weight: bold
 }
 
-#icons ul li:nth-of-type(1) span:hover {
+@media (max-width: 425px) {
+    header {
+        max-width: 425px;
+        height: 100vh;
+        
+    }
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
+    #icons {
+        position: absolute;
+        bottom: -110px;  
+        width: 300px;
+    }
+    #icons ul {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #icons ul li {
+        height: 50px;
+        display: flex;
+        align-items: flex-end;
+        transform-origin: top center;
+        position: static;
+        transform: rotate(0deg);
+    }
+    #icons ul li span {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold; 
+    }   
+}
+
+@media (min-width: 426px) {
+    #icons ul li:nth-of-type(1) {transform: rotate(50deg)}
+    #icons ul li:nth-of-type(2) {transform: rotate(25deg)}
+    #icons ul li:nth-of-type(3) {transform: rotate(0deg)}
+    #icons ul li:nth-of-type(4) {transform: rotate(-25deg)}
+    #icons ul li:nth-of-type(5) {transform: rotate(-50deg)}
+
+    #icons ul li:nth-of-type(1) span {transform: rotate(-50deg)}
+    #icons ul li:nth-of-type(2) span {transform: rotate(-25deg)}
+    #icons ul li:nth-of-type(3) span {transform: rotate(0deg)}
+    #icons ul li:nth-of-type(4) span {transform: rotate(25deg)}
+    #icons ul li:nth-of-type(5) span {transform: rotate(50deg)}
+
+
+    #icons ul li:nth-of-type(1) span:hover {
     transform: rotate(-50deg) translateY(-10px);
 
-}
-#icons ul li:nth-of-type(2) span:hover {
+    }
+    #icons ul li:nth-of-type(2) span:hover {
     transform: rotate(-25deg) translateY(-10px);
 
-}
-#icons ul li:nth-of-type(3) span:hover {
+    }
+    #icons ul li:nth-of-type(3) span:hover {
     transform: rotate(0deg) translateY(-10px);
 
-}
-#icons ul li:nth-of-type(4) span:hover {
+    }
+    #icons ul li:nth-of-type(4) span:hover {
     transform: rotate(25deg) translateY(-10px);
 
-}
-#icons ul li:nth-of-type(5) span:hover {
+    }
+    #icons ul li:nth-of-type(5) span:hover {
     transform: rotate(50deg) translateY(-10px);
 
+    } 
+    
+    header {
+        max-width: 1024px;
+        height: 100vh;
+        
+    }
+    .circle {
+        width: 250px;
+        height: 250px;
+    }
+    #icons {
+        position: absolute;
+        width: 300px;
+    }
+    #icons ul {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #icons ul li {
+        height: 250px;
+        display: flex;
+        align-items: flex-end;
+        transform-origin: top center;
+        position: absolute;
+        transform: rotate(0deg);
+        left: calc(50% - 25px)
+
+    }
+    #icons ul li span {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold; 
+    }  
 }
 
+@media (min-width: 1024px) {
+    #icons ul li:nth-of-type(1) {transform: rotate(50deg)}
+    #icons ul li:nth-of-type(2) {transform: rotate(25deg)}
+    #icons ul li:nth-of-type(3) {transform: rotate(0deg)}
+    #icons ul li:nth-of-type(4) {transform: rotate(-25deg)}
+    #icons ul li:nth-of-type(5) {transform: rotate(-50deg)}
+
+    #icons ul li:nth-of-type(1) span {transform: rotate(-50deg)}
+    #icons ul li:nth-of-type(2) span {transform: rotate(-25deg)}
+    #icons ul li:nth-of-type(3) span {transform: rotate(0deg)}
+    #icons ul li:nth-of-type(4) span {transform: rotate(25deg)}
+    #icons ul li:nth-of-type(5) span {transform: rotate(50deg)}
 
 
+    #icons ul li:nth-of-type(1) span:hover {
+    transform: rotate(-50deg) translateY(-10px);
+
+    }
+    #icons ul li:nth-of-type(2) span:hover {
+    transform: rotate(-25deg) translateY(-10px);
+
+    }
+    #icons ul li:nth-of-type(3) span:hover {
+    transform: rotate(0deg) translateY(-10px);
+
+    }
+    #icons ul li:nth-of-type(4) span:hover {
+    transform: rotate(25deg) translateY(-10px);
+
+    }
+    #icons ul li:nth-of-type(5) span:hover {
+    transform: rotate(50deg) translateY(-10px);
+
+    } 
+    
+    header {
+        max-width: 1200px;
+        height: 100vh;
+        
+    }
+    .circle {
+        width: 350px;
+        height: 350px;
+    }
+    #icons {
+        position: absolute;
+    }
+    #icons ul {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #icons ul li {
+        height: 320px;
+        display: flex;
+        align-items: flex-end;
+        transform-origin: top center;
+        position: absolute;
+        transform: rotate(0deg);
+        left: calc(50% - 35px)
+    }
+    #icons ul li span {
+        height: 70px;
+        width: 70px;
+        border-radius: 50px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold; 
+    }  
+}
+
+@media (min-width: 1200px) {
+    #icons ul li:nth-of-type(1) {transform: rotate(50deg)}
+    #icons ul li:nth-of-type(2) {transform: rotate(25deg)}
+    #icons ul li:nth-of-type(3) {transform: rotate(0deg)}
+    #icons ul li:nth-of-type(4) {transform: rotate(-25deg)}
+    #icons ul li:nth-of-type(5) {transform: rotate(-50deg)}
+
+    #icons ul li:nth-of-type(1) span {transform: rotate(-50deg)}
+    #icons ul li:nth-of-type(2) span {transform: rotate(-25deg)}
+    #icons ul li:nth-of-type(3) span {transform: rotate(0deg)}
+    #icons ul li:nth-of-type(4) span {transform: rotate(25deg)}
+    #icons ul li:nth-of-type(5) span {transform: rotate(50deg)}
 
 
+    #icons ul li:nth-of-type(1) span:hover {
+    transform: rotate(-50deg) translateY(-10px);
 
+    }
+    #icons ul li:nth-of-type(2) span:hover {
+    transform: rotate(-25deg) translateY(-10px);
 
+    }
+    #icons ul li:nth-of-type(3) span:hover {
+    transform: rotate(0deg) translateY(-10px);
+
+    }
+    #icons ul li:nth-of-type(4) span:hover {
+    transform: rotate(25deg) translateY(-10px);
+
+    }
+    #icons ul li:nth-of-type(5) span:hover {
+    transform: rotate(50deg) translateY(-10px);
+
+    } 
+    
+    header {
+        max-width: 100vw;
+        height: 100vh;
+        
+    }
+    .circle {
+        width: 350px;
+        height: 350px;
+    }
+    #icons {
+        position: absolute;
+    }
+    #icons ul {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #icons ul li {
+        height: 320px;
+        display: flex;
+        align-items: flex-end;
+        transform-origin: top center;
+        position: absolute;
+        transform: rotate(0deg);
+        left: calc(50% - 35px)
+    }
+    #icons ul li span {
+        height: 70px;
+        width: 70px;
+        border-radius: 50px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold; 
+    }  
+}
 
 
 
